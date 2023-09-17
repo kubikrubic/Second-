@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: linear-gradient(243deg, rgba(104,85,208,1) 0%, rgba(105,80,200,1) 12%, rgba(106,76,193,1) 23%, rgba(107,72,187,1) 32%, rgba(109,67,178,1) 45%, rgba(110,62,169,1) 58%, rgba(112,57,161,1) 71%, rgba(113,52,154,1) 82%, rgba(114,49,149,1) 89%, rgba(115,45,142,1) 100%);
+}
+
+:root {
+	--color-button: #ff5e00;
+	--color-gradient: linear-gradient(243deg, rgba(104,85,208,1) 0%, rgba(105,80,200,1) 12%, rgba(106,76,193,1) 23%, rgba(107,72,187,1) 32%, rgba(109,67,178,1) 45%, rgba(110,62,169,1) 58%, rgba(112,57,161,1) 71%, rgba(113,52,154,1) 82%, rgba(114,49,149,1) 89%, rgba(115,45,142,1) 100%);
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 97vh;
+	width: 100%;
+}
+
+.Todo {
+	width: 100%;
+	max-width: 540px;
+	background-color: #f5f5f5;
+	border-radius: 15px;
+	box-shadow: 0 0 50px 1px rgb(73, 73, 73);
+	padding: 30px 30px 70px;
+}
+
+.title-text {
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+	font-weight: 600;
+	color: rgb(70, 42, 226);
+}
+
+.title-text img {
+	margin-left: 10px;
+}
+
+.input-box {
+	width: 90%;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.first-box {
+	margin-bottom: 21px;
+}
+
+.text-input {
+	position: absolute;
+	left: 0px;
+	padding: 10px;
+	padding-left: 30px;
+	pointer-events: none;
+	transition: .3s ease;
+	z-index: 2;
+	color: #555;
+}
+
+.input {
+	padding: 10px;
+	width: 100%;
+	background-color: #f5f5f5;
+	border: 1px solid #3a3a3a;
+	border-radius: 40px;
+	z-index: 1;
+	font-size: 1rem;
+	outline: none;
+}
+
+
+.input:focus,
+.input:valid {
+	border: 1px solid #ff5e00;
+}
+
+
+.input-box input:focus + span,
+.input-box input:valid + span{
+	padding-bottom: 0px;
+	color: var(--color-button);
+	font-size: 0.8rem;
+	transform: translateX(25px) translateY(-26px);
+	background-color: #f5f5f5;
+	padding-left: 10px;
+}
+
+.input-section {
+	position: relative;
+}
+
+#add-button {
+	padding: 7px 15px 7px 15px;
+	z-index: 3;
+	position: absolute;
+	width: 105px;
+	height: 100%;
+	top: 0px;
+	right: 0px;
+	border-radius: 50%;
+	background-color: var(--color-button);
+	border: none;
+
+	font-family: 'Poppins', sans-serif;
+	color: #f5f5f5;
+	font-size: 1.1rem;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	transition: 0.3s ease;
+}
+
+
+#add-button:hover {
+	background-color: #f15900;
+	color: #ececec;
+}
+
+
+li {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	list-style-type: none;
+	font-size: 1.1rem;
+	padding: 30px 8px 0px 33px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font-weight: 400;
+	user-select: none;
+}
+.checked {
+	color: #555;
+	text-decoration: line-through;
+}
+
+.price {
+	position: absolute;
+	color: #1a1919;
+	right: 90px;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+li span#name {
+	width: 35%;
+}
+
+
+
+.checked::before {
+	background-image: url('checked.png');
+	background-size: cover;
+	background-position: center;
+	height: 18px;
+	width: 18px;
+}
+
+li::before {
+	content: '';
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+	background-image: url('unchecked.png');
+	background-size: cover;
+	background-position: center;
+	left: 0px;
+}
+
+li span.cross {
+	position: absolute;
+	right: 0;
+	height: 40px;
+	width: 40px;
+	font-size: 1.5rem;
+	color: #555;
+	line-height: 42.5px;
+	transition: .3s;
+}
+
+
+ul li span.cross:hover {
+	background: #bebebe;
+	border-radius: 50%;
+}
+
+
+#delete {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.1rem;
+	font-weight: 500;
+	background: linear-gradient(243deg, rgba(104,85,208,1) 0%, rgba(105,80,200,1) 12%, rgba(106,76,193,1) 23%, rgba(107,72,187,1) 32%, rgba(109,67,178,1) 45%, rgba(110,62,169,1) 58%, rgba(112,57,161,1) 71%, rgba(113,52,154,1) 82%, rgba(114,49,149,1) 89%, rgba(115,45,142,1) 100%);;
+	border: none;
+	padding: 10px 20px;
+	color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	height: 47px;
+}
+
+#delete:hover {
+	
+	color: rgba(104,85,208,1);
+	background: #f5f5f5;
+	border: 1px solid rgba(104,85,208,1);
+}
+
+.last-block {
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.total {
+	background: #a7a7a7;
+	border-radius: 15px;
+	font-size: 1.1rem;
+	margin-left: 125px;
+}
+
+.text-in {
+	padding: 9px 15px;
+}
+
+
+#text-totalNumber {
+	color: #f16000;
+}
+
