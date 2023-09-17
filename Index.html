@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ToDo | list</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="adaptiv.css">
+</head>
+<body>
+	<div class="container">
+		<div class="Todo">
+			<div class="title-text">
+				To-Do List
+				<img style="width: 30px;" src="icon.png">
+			</div>
+			<div class="input-section">
+				<div class="input-box first-box">
+					<input type="text" id="input-name" class="input" required>
+					<span class="text-input">Name</span>
+					
+				</div>
+
+				<div class="button-add-box">
+					<button id="add-button">Add</button>	
+				</div>
+
+				<div class="input-box">
+					<input type="text" id="input-price" class="input" required>
+					<span class="text-input">Prise</span>
+				</div>
+			</div>
+
+			<div class="list-tasks">
+				<ul id="list">
+				</ul>
+			</div>
+			<div class="last-block">
+				<button id="delete">Delete All Tasks</button>
+
+				<div class="total">
+					<div class="text-in">
+						<span class="text-total">Итого:</span>
+						<span id="text-totalNumber">0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html
