@@ -99,12 +99,12 @@ button__delete.addEventListener('click', () => {
 // }
 
 function saveData() {
-	localStorage.setItem('data', list.innerHTML)
-	localStorage.setItem('total', totalNumber.innerHTML)
+	localStorage.setItem('data-second', list.innerHTML)
+	localStorage.setItem('total-second', totalNumber.innerHTML)
 }
 function showTask() {
-	list.innerHTML = localStorage.getItem('data')
-	totalNumber.innerHTML = localStorage.getItem('total')
+	list.innerHTML = localStorage.getItem('data-second')
+	totalNumber.innerHTML = localStorage.getItem('total-second')
 }
 showTask()
 
